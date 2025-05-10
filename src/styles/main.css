@@ -1,0 +1,140 @@
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #e0e0e0;
+}
+
+.calculator {
+	background: #f9f9f9;
+	border-radius: 12px;
+	padding: 24px 18px 18px 18px;
+	width: 340px;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+	border: 1px solid #d1d1d1;
+}
+
+.display {
+	background: #222;
+	color: #fff;
+	font-size: 1.6em;
+	text-align: right;
+	padding: 18px 12px 8px 12px;
+	border-radius: 8px;
+	margin-bottom: 18px;
+	min-height: 120px;
+	max-height: 120px;
+	height: 120px;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.expression {
+	font-size: 1em;
+	opacity: 0.7;
+	color: #bbb;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.result {
+	font-size: 2em;
+	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.button-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+.button-grid-vertical {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.button-row {
+	display: flex;
+	gap: 8px;
+}
+
+.button-row button {
+	flex: 1 1 0;
+	height: 48px;
+	font-size: 1.2em;
+	border: none;
+	border-radius: 6px;
+	background: #f3f3f3;
+	color: #222;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+	transition: all 0.2s;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-row button:hover {
+	background: #e0e0e0;
+	transform: translateY(-1px);
+}
+
+.button-row button:active {
+	transform: translateY(1px);
+}
+
+button {
+	background-color: #455a64;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	font-size: 1.5em;
+	color: white;
+	transition: all 0.2s;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+	background-color: #546e7a;
+	transform: translateY(-2px);
+}
+
+button:active {
+	transform: translateY(1px);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.button-equal {
+	background: #1976d2;
+	color: #fff;
+	font-weight: 700;
+}
+
+.button-equal:active {
+	background: #1565c0;
+}
+
+.button-op {
+	background: #e3eafc;
+	color: #1a237e;
+	font-weight: 600;
+}
+
+.button-op:active {
+	background: #c5cae9;
+}
+
+button-row button[disabled] {
+	opacity: 0.5;
+	cursor: default;
+}
